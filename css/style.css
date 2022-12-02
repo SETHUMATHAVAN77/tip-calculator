@@ -22,7 +22,7 @@ html {
 body {
   font-family: 'Space Mono', monospace;
   background-color: var(--clr-light-grayish-cyan);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -33,15 +33,16 @@ body {
 }
 /* project  css */
 .title {
-  height: 6vh;
+  height: 5vh;
+  font-size: 1.5rem;
 }
 .main {
   background-color: var(--clr-white);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
-  height: 94vh;
-  gap: 1rem;
+  min-height: 95vh;
+  gap: 2rem;
   width: 98%;
   padding: 2rem;
   margin: auto;
@@ -49,9 +50,11 @@ body {
 
 .left-container {
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  gap: 1rem;
 }
 
 .form-control {
@@ -73,18 +76,29 @@ body {
   border-radius: 8px;
   font-size: 24px;
   color: var(--clr-very-dark-cyan);
+  background-image: url(//images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.input-bill:hover{
+  border: 2px solid var(--clr-strong-cyan);
+}
+.input-people:hover{
+  border: 2px solid var(--clr-strong-cyan);
 }
 
 .tips-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  width: 19rem;
+  width: 21rem;
   margin: auto;
 }
 
+
 .tips-container input {
-  width: 9rem;
+  width: 8.75rem;
   height: 3rem;
 }
 
@@ -95,6 +109,11 @@ body {
   font-size: 24px;
   cursor: pointer;
   border: 2px solid hsl(183, 100%, 15%);
+  transition: all 0.5s ease-out;
+}
+.tip-percent:hover{
+  background-color: var(--clr-grayish-cyan);
+  transform: scale(1.05) translate(-5px);
 }
 
 .custom-tip {
@@ -102,42 +121,60 @@ body {
   padding-left: 1rem;
   text-transform: uppercase;
   color: var(--clr-very-dark-cyan);
+  background-color: var(--clr-very-light-grayish-cyan);
+  border: none;
+  border-radius: 8px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 .right-container{
-  width: 60%;
-  height: 70vh;
+  background-color: var(--clr-very-dark-cyan);
+  border-radius: 15px;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  background-color: var(--clr-very-dark-cyan);
-  border-radius: 24px;
+  justify-content: space-between;
 }
-.tip-end-container{
-  
+.output{
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin: 1.5rem auto;
 }
-.tip-amount-container,.total-container{
-  padding-left: 2rem;
-  color: var(--clr-white);
+.title-tip{
   font-size: 1.5rem;
-  padding: 2rem;
+  color: var(--clr-white);
+  margin-bottom: 0.25rem;
 }
-.person{
+.subtitle{
+  font-size: 0.8rem;
   color: var(--clr-light-grayish-cyan);
-  font-size: 1rem;
 }
-.reset{
-  background-color: var(--clr-strong-cyan);
-  width: 60%;
-  padding: 1rem;
-  margin-left: 5rem;
-  border:2px solid var(--clr-strong-cyan);
+.output-right p{
+  font-size: 2rem;
+  color: var(--clr-strong-cyan);
+}
+
+.btn-reset{
+  padding: 0.75rem 0;
   border-radius: 10px;
+  background-color: var(--clr-strong-cyan);
+  border: 2px solid var(--clr-strong-cyan);
   color: var(--clr-very-dark-cyan);
   font-size: 1.5rem;
-  
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 991px) {
+  .body{
+    max-height: 100vh;
+    min-height: 0;
+  }
   .main {
+    max-height: 95vh;
+    min-height: 0;
     flex-direction: row;
     width: 75%;
     align-items: center;
@@ -147,7 +184,14 @@ body {
   .tips-container {
     width: 29rem;
   }
-  .reset{
-    margin-top: 3rem;
+  .left-container{
+    width: 50%;
   }
+  .right-container{
+    width: 50%;
+  }
+  .output-container{
+    margin-bottom: 2rem;
+  }
+  
 }

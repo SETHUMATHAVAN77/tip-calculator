@@ -68,18 +68,33 @@ body {
   font-size: 18px;
 }
 
-.input-bill,
+.input-bill {
+  padding: 0.75rem 1rem;
+  background-color: var(--clr-very-light-grayish-cyan);
+  border: none;
+  border-radius: 8px;
+  font-size: 2rem;
+  padding-left: 4rem;
+  color: var(--clr-very-dark-cyan);
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 10px;
+  background-size: contain;
+  cursor: pointer;
+}
 .input-people {
   padding: 0.75rem 1rem;
   background-color: var(--clr-very-light-grayish-cyan);
   border: none;
   border-radius: 8px;
-  font-size: 24px;
+  font-size: 2rem;
+  padding-left: 4rem;
   color: var(--clr-very-dark-cyan);
-  background-image: url(//images/icon-dollar.svg);
+  background-image: url(../images/icon-person.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position:10px;
   background-size: contain;
+  cursor: pointer;
 }
 .input-bill:hover{
   border: 2px solid var(--clr-strong-cyan);
@@ -109,7 +124,7 @@ body {
   font-size: 24px;
   cursor: pointer;
   border: 2px solid hsl(183, 100%, 15%);
-  transition: all 0.5s ease-out;
+  transition: all 0.5s ease-in;
 }
 .tip-percent:hover{
   background-color: var(--clr-grayish-cyan);
@@ -165,6 +180,12 @@ margin: 1.5rem auto;
   border: 2px solid var(--clr-strong-cyan);
   color: var(--clr-very-dark-cyan);
   font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.btn-reset:hover{
+  background-color: var(--clr-grayish-cyan);
+  transform: scale(1.05) translate(-5px);
 }
 
 @media screen and (min-width: 991px) {
